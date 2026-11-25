@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Élections Amicale ESMT 2026</title>
+<meta name="description" content="Candidatures ouvertes pour la présidence de l'Amicale des étudiants de l'ESMT : code électoral, calendrier, acte de candidature.">
+<meta property="og:title" content="Élections Amicale ESMT 2026 — Candidatures ouvertes">
+<meta property="og:description" content="Tous les documents pour candidater : code électoral, calendrier, acte de candidature.">
+<meta property="og:image" content="documents/Affiche_candidatures_ESMT_2026.jpg">
+<meta name="theme-color" content="#1f2a5a">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1f2a5a; --navy-2:#2a3770;
+    --green:#8dc63f; --green-dark:#3a9a2e;
+    --blue:#1a7fc1;
+    --ink:#1f2a5a; --text:#3b4260; --muted:#6b7290;
+    --bg:#f5f7fb; --card:#ffffff; --line:#e3e8f2; --soft:#eef4fb; --soft-green:#f0f6ea;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 16px}
+  .bar{height:6px;background:linear-gradient(90deg,var(--green-dark),var(--green) 45%,var(--blue))}
+
+  /* Header */
+  header.top{background:#fff;text-align:center;padding:28px 16px 18px}
+  header.top img{width:220px;max-width:70%;height:auto}
+  .kicker{margin:10px 0 0;color:var(--blue);font-weight:600;letter-spacing:.32em;font-size:12px;text-transform:uppercase}
+
+  /* Hero */
+  .hero{background:var(--navy);color:#fff;text-align:center;padding:44px 16px 48px}
+  .hero h1{margin:0;font-weight:800;line-height:1.02;font-size:clamp(38px,9vw,72px);letter-spacing:.01em}
+  .hero h1 span{display:block;color:var(--green)}
+  .hero p{margin:16px auto 0;max-width:560px;font-size:clamp(15px,3.6vw,19px);opacity:.92}
+
+  /* Deadline */
+  .deadline{margin-top:-28px;position:relative}
+  .deadline .box{background:#fff;border-radius:var(--radius);box-shadow:0 10px 30px rgba(31,42,90,.12);display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:22px 24px;border-left:6px solid var(--green-dark)}
+  .deadline .label{font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--navy);text-transform:uppercase}
+  .deadline .date{font-size:clamp(26px,6vw,38px);font-weight:800;color:var(--green-dark);line-height:1.1;margin-top:4px}
+  .deadline .time{font-weight:700;color:var(--navy);font-size:18px}
+  .countdown{display:flex;gap:8px}
+  .countdown div{background:var(--soft);border-radius:10px;min-width:62px;padding:8px 6px;text-align:center}
+  .countdown b{display:block;font-size:24px;color:var(--navy);line-height:1.1;font-variant-numeric:tabular-nums}
+  .countdown small{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .countdown.closed{font-weight:700;color:var(--navy)}
+
+  section{padding:44px 0 8px}
+  h2{color:var(--navy);font-size:clamp(22px,4.6vw,28px);margin:0 0 6px;font-weight:700}
+  h2::after{content:"";display:block;width:56px;height:4px;background:var(--green);border-radius:2px;margin-top:8px}
+  .lead{margin:12px 0 22px;color:var(--muted)}
+
+  /* Documents */
+  .docs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .doc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:12px;transition:box-shadow .2s,transform .2s}
+  .doc:hover{box-shadow:0 8px 24px rgba(31,42,90,.10);transform:translateY(-2px)}
+  .doc .head{display:flex;gap:14px;align-items:flex-start}
+  .icon{flex:none;width:48px;height:56px;border-radius:8px;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;position:relative}
+  .icon::before{content:"";position:absolute;top:0;right:0;border-style:solid;border-width:0 14px 14px 0;border-color:transparent var(--bg) rgba(255,255,255,.35) transparent;border-radius:0 8px 0 0}
+  .icon.pdf{background:#d64545}.icon.doc-i{background:#2b6cc4}.icon.img{background:var(--green-dark)}
+  .doc h3{margin:0;color:var(--navy);font-size:17px;line-height:1.3}
+  .doc p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+  .tag{display:inline-block;font-size:11px;font-weight:600;background:var(--soft-green);color:var(--green-dark);border-radius:999px;padding:2px 10px;margin-top:6px}
+  .actions{display:flex;gap:10px;margin-top:auto;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;font-size:14px;border-radius:10px;padding:10px 16px;flex:1;min-height:44px;font-family:inherit;border:0;cursor:pointer}
+  .btn.primary{background:var(--navy);color:#fff}
+  .btn.primary:hover{background:var(--navy-2)}
+  .btn.ghost{background:var(--soft);color:var(--navy)}
+  .btn.ghost:hover{background:#e2ecf8}
+  .btn svg{width:18px;height:18px}
+
+  /* Steps */
+  .steps{counter-reset:s;display:grid;gap:12px;padding:0;margin:0;list-style:none}
+  .steps li{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px 16px 64px;position:relative}
+  .steps li::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--green);color:var(--navy);font-weight:800;display:grid;place-items:center}
+  .steps b{color:var(--navy)}
+
+  /* Calendar */
+  .cal{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  .cal div{background:#fff;border-radius:10px;border-top:5px solid var(--green);padding:14px;box-shadow:0 1px 0 var(--line)}
+  .cal div.key{border-top-color:var(--green-dark);background:var(--soft-green)}
+  .cal b{display:block;color:var(--navy);font-size:17px}
+  .cal span{font-size:14px;color:var(--text)}
+
+  /* Eligibility */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .panel h3{margin:0 0 10px;color:var(--navy);font-size:17px}
+  .panel ul{margin:0;padding-left:20px}
+  .panel li{margin:6px 0;font-size:14.5px}
+  .panel li::marker{color:var(--green-dark)}
+  .note{font-size:13px;color:var(--muted);margin-top:12px}
+
+  /* Contact / footer */
+  .contact{margin:48px 0 0;background:var(--navy);color:#fff;text-align:center;padding:40px 16px}
+  .contact p.big{font-size:clamp(18px,4.4vw,24px);font-weight:700;margin:0 0 6px}
+  .contact p.big span{color:var(--green)}
+  .contact .mail{display:inline-flex;margin-top:18px;background:var(--green);color:var(--navy);font-weight:700;text-decoration:none;border-radius:12px;padding:14px 22px;word-break:break-all;font-size:15px}
+  .contact .mail:hover{background:#9fd457}
+  footer{background:var(--navy);color:rgba(255,255,255,.6);font-size:12.5px;text-align:center;padding:0 16px 26px}
+
+  @media (max-width:760px){
+    .docs,.grid2{grid-template-columns:1fr}
+    .cal{grid-template-columns:1fr 1fr}
+    .cal div:first-child{grid-column:1/-1}
+    .deadline .box{grid-template-columns:1fr}
+    .countdown div{flex:1;min-width:0}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <img src="assets/logo.png" alt="ESMT — École Supérieure Multinationale des Télécommunications">
+  <p class="kicker">Commission électorale</p>
+</header>
+<div class="bar"></div>
+
+<div class="hero">
+  <h1>Candidatures <span>ouvertes</span></h1>
+  <p>Présidence de l’Amicale des étudiants de l’ESMT — Élections 2026</p>
+</div>
+<div class="bar"></div>
+
+<main class="wrap">
+
+  <div class="deadline">
+    <div class="box">
+      <div>
+        <div class="label">Date limite de dépôt</div>
+        <div class="date">2 décembre 2026</div>
+        <div class="time">à 23h59</div>
+      </div>
+      <div class="countdown" id="countdown" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <section id="documents">
+    <h2>Les documents</h2>
+    <p class="lead">Tout ce qu’il faut pour candidater : conditions, dossier à fournir et dates.</p>
+
+    <div class="docs">
+      <article class="doc">
+        <div class="head">
+          <div class="icon doc-i">DOCX</div>
+          <div>
+            <h3>Acte de candidature</h3>
+            <p>Formulaire à remplir, signer et envoyer à la commission.</p>
+            <span class="tag">À remplir</span>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="documents/Acte_de_candidature_ESMT_2026.docx" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+            Télécharger
+          </a>
+        </div>
+      </article>
+
+      <article class="doc">
+        <div class="head">
+          <div class="icon pdf">PDF</div>
+          <div>
+            <h3>Code électoral</h3>
+            <p>Éligibilité, composition de la liste, campagne, vote et recours (34 articles).</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn ghost" href="documents/Code_electoral_ESMT.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+            Lire
+          </a>
+          <a class="btn primary" href="documents/Code_electoral_ESMT.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+            Télécharger
+          </a>
+        </div>
+      </article>
+
+      <article class="doc">
+        <div class="head">
+          <div class="icon pdf">PDF</div>
+          <div>
+            <h3>Calendrier des élections</h3>
+            <p>Programme officiel des élections 2026, du dépôt aux résultats.</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn ghost" href="documents/Calendrier_elections_ESMT_2026.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+            Lire
+          </a>
+          <a class="btn primary" href="documents/Calendrier_elections_ESMT_2026.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+            Télécharger
+          </a>
+        </div>
+      </article>
+
+      <article class="doc">
+        <div class="head">
+          <div class="icon img">JPG</div>
+          <div>
+            <h3>Communiqué officiel</h3>
+            <p>L’affiche de l’appel à candidatures, à partager autour de toi.</p>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn ghost" href="documents/Affiche_candidatures_ESMT_2026.jpg" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+            Voir
+          </a>
+          <a class="btn primary" href="documents/Affiche_candidatures_ESMT_2026.jpg" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+            Télécharger
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="candidater">
+    <h2>Comment candidater</h2>
+    <p class="lead">Ton dossier complet doit arriver avant le <b>2 décembre 2026 à 23h59</b>.</p>
+    <ol class="steps">
+      <li><b>Lis le code électoral</b> et vérifie que tu remplis les conditions d’éligibilité (article 7).</li>
+      <li><b>Remplis et signe l’acte de candidature.</b></li>
+      <li><b>Constitue ta liste</b> (bureau complet) en respectant les règles de l’article 10, et rédige ton <b>plan d’action / plan de campagne</b>.</li>
+      <li><b>Envoie le tout par e-mail</b> à <a href="mailto:candidatureesmt2026@gmail.com">candidatureesmt2026@gmail.com</a>. Tu peux y joindre un CV et une lettre de motivation.</li>
+    </ol>
+  </section>
+
+  <section id="conditions">
+    <h2>L’essentiel du code électoral</h2>
+    <p class="lead">Résumé pour s’y retrouver vite. Le document complet fait foi.</p>
+    <div class="grid2">
+      <div class="panel">
+        <h3>Pour être candidat·e (art. 7)</h3>
+        <ul>
+          <li>Être régulièrement inscrit·e à l’ESMT</li>
+          <li>Avoir au moins un an d’ancienneté à l’ESMT Dakar</li>
+          <li>Ne pas être membre du bureau d’un autre club reconnu de l’ESMT</li>
+          <li>Ne pas être membre de la Commission électorale</li>
+          <li>Déposer l’acte de candidature, la liste du bureau et le plan d’action avant la date limite</li>
+        </ul>
+        <p class="note">Un étudiant en dernière année de cycle peut se présenter.</p>
+      </div>
+      <div class="panel">
+        <h3>Ta liste (art. 9 et 10)</h3>
+        <ul>
+          <li>Secrétaire général, Trésorier, Resp. Organisation + adjoint, Resp. Communication + adjoint, Resp. Relations extérieures + adjoint, Resp. des étudiants, Directeur de campagne</li>
+          <li>Pas plus de deux membres d’un même cycle</li>
+          <li>Parité femmes / hommes</li>
+          <li>Diversité des nationalités de l’ESMT</li>
+          <li>Le Trésorier ne doit pas être en dernière année</li>
+        </ul>
+        <p class="note">Vote : étudiants 60 %, administration 40 %, en un seul tour.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="calendrier">
+    <h2>Calendrier</h2>
+    <p class="lead">Programme officiel des élections 2026.</p>
+    <div class="cal">
+      <div class="key"><b>2 déc.</b><span>Date limite des candidatures (23h59)</span></div>
+      <div><b>3 – 9 déc.</b><span>Préparation des campagnes</span></div>
+      <div><b>10 – 18 déc.</b><span>Campagne électorale</span></div>
+      <div><b>21 – 22 déc.</b><span>Élections présidentielles</span></div>
+      <div><b>23 déc.</b><span>Dépouillement et résultats</span></div>
+    </div>
+  </section>
+
+</main>
+
+<div class="contact">
+  <p class="big">Qui sait, la prochaine présidente de l’Amicale, <span>c’est peut-être toi !</span></p>
+  <p>Envoie ton dossier ou pose tes questions à la commission électorale :</p>
+  <a class="mail" href="mailto:candidatureesmt2026@gmail.com?subject=Candidature%20Amicale%20ESMT%202026">candidatureesmt2026@gmail.com</a>
+</div>
+<footer>Commission électorale · Amicale des Étudiants de l’ESMT · Dakar</footer>
+
+<script>
+(function(){
+  var el = document.getElementById('countdown');
+  // 2 décembre 2026, 23h59 heure de Dakar (UTC+0)
+  var end = Date.UTC(2026, 11, 2, 23, 59, 59);
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+  function tick(){
+    var d = end - Date.now();
+    if (d <= 0){
+      el.className = 'countdown closed';
+      el.textContent = 'Les dépôts sont clos.';
+      return;
+    }
+    var s = Math.floor(d / 1000);
+    var parts = [
+      [Math.floor(s / 86400), 'jours'],
+      [Math.floor(s % 86400 / 3600), 'h'],
+      [Math.floor(s % 3600 / 60), 'min'],
+      [s % 60, 's']
+    ];
+    el.innerHTML = parts.map(function(p){
+      return '<div><b>' + pad(p[0]) + '</b><small>' + p[1] + '</small></div>';
+    }).join('');
+    setTimeout(tick, 1000);
+  }
+  tick();
+})();
+</script>
+</body>
+</html>
